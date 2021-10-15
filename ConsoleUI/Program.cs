@@ -15,12 +15,12 @@ namespace ConsoleUI
             Motorcycle honda = new Motorcycle() { HasSideCart = true, Make = "Honda", Model = "CBR500R", Year = 2021 };
 
             Vehicle SUV = new Car() { HasTrunk = true, Make = "Mazda", Model = "CX-5", Year = 2023 };
-            Vehicle motorcycle = new Motorcycle() { HasSideCart = true, Make = "Hyundai", Model = "Sonata", Year = 2020};
+            Vehicle hyundai = new Car() { HasTrunk = true, Make = "Hyundai", Model = "Sonata", Year = 2020};
 
             vehicles.Add(acura);
             vehicles.Add(honda);
             vehicles.Add(SUV);
-            vehicles.Add(motorcycle);
+            vehicles.Add(hyundai);
 
             foreach (var vehicle in vehicles)
             {
@@ -28,10 +28,14 @@ namespace ConsoleUI
                 Console.WriteLine("Output Information for this vehicle:");
                 
                 Console.WriteLine($"{vehicle.Make} {vehicle.Model} {vehicle.Year}");
-                
-                vehicle.DriveAbstract();
-                vehicle.DriveVirtual();
             }
+            Console.WriteLine();
+            Console.WriteLine("==========================");
+            Console.WriteLine("Calling Methods:");
+            acura.DriveAbstract();
+            acura.DriveVirtual();
+            honda.DriveAbstract();
+            honda.DriveVirtual();
             /*
              * Todo follow all comments!! 
              */
